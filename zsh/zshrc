@@ -27,7 +27,8 @@ zstyle ':dotzsh:load' dzmodule \
   'history' \
   'utility' \
   'completion' \
-  'theme'
+  'theme' \
+  'tmux'
 
 ### Global settings
 # Color output (auto set to 'no' on dumb terminals).
@@ -49,11 +50,11 @@ zstyle ':dotzsh:module:terminal' auto-title 'yes'
 
 ### Editor module
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':dotzsh:module:editor' keymap 'emacs'
+zstyle ':dotzsh:module:editor' keymap 'vi'
 # Set EDITOR to 'emacs' or 'vi'.
 zstyle ':dotzsh:module:editor' editor 'vi'
 # Auto convert .... to ../..
-#zstyle ':dotzsh:module:editor' dot-expansion 'yes'
+zstyle ':dotzsh:module:editor' dot-expansion 'yes'
 
 ### Utility Module
 # Disable `diff` highlighting
@@ -90,7 +91,7 @@ zstyle ':dotzsh:module:ssh:agent' forwarding 'yes'
 # Auto start a session when Zsh is launched.
 # Setting it to 'local' only starts a session for local terminals.
 # Setting it to 'remote' only starts a session for SSH connections.
-##zstyle ':dotzsh:module:tmux' auto-start 'no'
+zstyle ':dotzsh:module:tmux' auto-start 'yes'
 #zstyle ':dotzsh:module:tmux:aliases' tmuxinator 'yes'
 
 ### Syntax Highlighting module
@@ -101,7 +102,7 @@ zstyle ':dotzsh:module:ssh:agent' forwarding 'yes'
 # Set default theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':dotzsh:module:theme' theme 'dotphiles'
+zstyle ':dotzsh:module:theme' theme 'sorin'
 ### Set custom theme based on hostname or domain
 # zstyle ':dotzsh:module:theme:hostname:your-host-here' theme 'dotphiles' 'soldark' 'magenta'
 # zstyle ':dotzsh:module:theme:hostname:your-other-host-here' theme 'dotphiles' 'soldark' 'violet'
